@@ -43,10 +43,18 @@ const images = [
   sx.addEventListener('click', function(){
         
         document.querySelector('.item.active').classList.remove('active')
+
+        if(arrowClick > 0){
         arrowClick--;
         
         imgs[arrowClick].classList.add('active')
-        console.log(arrowClick)
+        }
+
+        else { arrowClick = (images.length-1);
+            imgs[arrowClick].classList.add('active')
+        }
+
+
   })
 
 
@@ -54,7 +62,7 @@ const images = [
     console.log(arrowClick)
     document.querySelector('.item.active').classList.remove('active')
 
-    if (arrowClick < 4){
+    if (arrowClick < images.length-1){
     arrowClick++;
 
     imgs[arrowClick].classList.add('active')}
