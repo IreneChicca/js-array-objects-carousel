@@ -24,3 +24,8 @@ height: 100%;
 cursor: pointer;
 background-color: rgba(160, 47, 47, 0.363);
 }
+
+.item {display: none;}
+
+.active {display: block;}
+

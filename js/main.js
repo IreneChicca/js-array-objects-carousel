@@ -27,24 +27,53 @@ const images = [
   ];
 
 
-  // individuo il paragrafo dove scrivere
+  // individuo elementi di interesse
 
   const slider = document.getElementById('slider')
 
-
-
-
-
-
-  slider.innerHTML += '<img src="'+images[0].image+'" alt=""></img>'
+  const sx = document.getElementById('sx')
+  const dx = document.getElementById('dx')
   
-  images.forEach( (img)=> {
+
+  slider.innerHTML += '<img src="'+images[0].image+'" alt="" class="item active"></img>'
+
+   images.forEach( (img)=> {
 
    
-
+    slider.innerHTML += '<img src="'+img.image+'" alt="" class="item"></img>'
     console.log(img.image)
   }
   )
+
+
+  const imgs = document.getElementsByClassName('item');
+  console.log(imgs)
+
+
+  let arrowClick = 0;
+
+  // aggiungi controlli
+
+  sx.addEventListener('click', function(){
+
+        document.querySelector('.item.active').classList.remove('active')
+        arrowClick--;
+        
+        imgs[arrowClick].classList.add('active')
+        console.log(arrowClick)
+  })
+
+
+  dx.addEventListener('click', function(){
+
+    document.querySelector('.item.active').classList.remove('active')
+    arrowClick++;
+
+    imgs[arrowClick].classList.add('active')
+    console.log(arrowClick)
+})
+
+
 
 
 
