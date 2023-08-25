@@ -29,33 +29,19 @@ const images = [
 
   // individuo elementi di interesse
 
-  const slider = document.getElementById('slider')
+  const slider = document.getElementById('containerpic')
 
   const sx = document.getElementById('sx')
   const dx = document.getElementById('dx')
   
-
-  slider.innerHTML += '<img src="'+images[0].image+'" alt="" class="item active"></img>'
-
-   images.forEach( (img)=> {
-
-   
-    slider.innerHTML += '<img src="'+img.image+'" alt="" class="item"></img>'
-    console.log(img.image)
-  }
-  )
-
-
-  const imgs = document.getElementsByClassName('item');
-  console.log(imgs)
-
+  
 
   let arrowClick = 0;
 
   // aggiungi controlli
 
   sx.addEventListener('click', function(){
-
+        
         document.querySelector('.item.active').classList.remove('active')
         arrowClick--;
         
@@ -65,7 +51,7 @@ const images = [
 
 
   dx.addEventListener('click', function(){
-
+    alert('ok')
     document.querySelector('.item.active').classList.remove('active')
     arrowClick++;
 
@@ -73,6 +59,26 @@ const images = [
     console.log(arrowClick)
 })
 
+
+
+
+ // slider.innerHTML += '<img src="./'+images[0].image+'" alt="" class="item active"></img>'
+
+let primo = 'active';
+
+ images.forEach( (img)=> {
+
+
+ slider.innerHTML += '<img src="./'+img.image+'" alt="" class="item '+primo+'"></img>'
+
+ primo = '';
+ 
+}
+)
+
+
+const imgs = document.getElementsByClassName('item');
+console.log(imgs)
 
 
 

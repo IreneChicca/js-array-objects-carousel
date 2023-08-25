@@ -13,6 +13,7 @@ border: 1px solid red;
 height: 100%;
 cursor: pointer;
 background-color: rgba(160, 47, 47, 0.363);
+z-index: 1;
 }
 
 .arrow-dx {position: absolute;
@@ -23,6 +24,7 @@ border: 1px solid red;
 height: 100%;
 cursor: pointer;
 background-color: rgba(160, 47, 47, 0.363);
+z-index: 1;
 }
 
 .item {display: none;}
