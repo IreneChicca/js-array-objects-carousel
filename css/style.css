@@ -1,1 +1,26 @@
-h1 {color: red;}
+img {max-width: 100%;
+
+    
+    width: 800px;
+}
+
+.slider {position: relative;}
+
+.arrow-sx {position: absolute;
+top: 0;
+color: white;
+border: 1px solid red;
+height: 100%;
+cursor: pointer;
+background-color: rgba(160, 47, 47, 0.363);
+}
+
+.arrow-dx {position: absolute;
+top: 0;
+right:  0;
+color: white;
+border: 1px solid red;
+height: 100%;
+cursor: pointer;
+background-color: rgba(160, 47, 47, 0.363);
+}
