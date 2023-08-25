@@ -51,11 +51,18 @@ const images = [
 
 
   dx.addEventListener('click', function(){
-    alert('ok')
+    console.log(arrowClick)
     document.querySelector('.item.active').classList.remove('active')
+
+    if (arrowClick < 4){
     arrowClick++;
 
-    imgs[arrowClick].classList.add('active')
+    imgs[arrowClick].classList.add('active')}
+    
+    else { arrowClick=0;
+    
+        imgs[arrowClick].classList.add('active')
+    }
     console.log(arrowClick)
 })
 
